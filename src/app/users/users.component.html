@@ -1,3 +1,4 @@
+<caption>{{ tableTitle }}</caption>
 <table>
     <thead>
         <tr>
@@ -10,15 +11,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let user of users ">
+            <td>{{ user.name }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.fiscalcode }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.province }}</td>
         </tr>
     </tbody>
 </table>
