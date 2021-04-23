@@ -11,13 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of users ">
-            <td>{{ user.name }}</td>
-            <td>{{ user.lastname }}</td>
-            <td>{{ user.fiscalcode }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.phone }}</td>
-            <td>{{ user.province }}</td>
-        </tr>
+        <!-- per dichiarare la variabile input dalla quale prendere valori usiamo user-data e gli assegniamo il valore di user -->
+        <tr app-user *ngFor="let user of users" [user-data]="user"></tr>
     </tbody>
 </table>
