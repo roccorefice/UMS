@@ -1,3 +1,4 @@
+import { UserService } from './../users/user.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -10,12 +11,12 @@ export class UserComponent implements OnInit {
   // decoratore Input serve per dichiarare una variabile dalla quale prendere valori
   // 'user-data' alias della variabile user
   @Input('user-data') user
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
   }
   deleteUser(){
-    alert(this.user.name);
+    this.userService.deleteUser(this.user);
   }
 
 }
