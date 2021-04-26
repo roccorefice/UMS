@@ -1,5 +1,6 @@
 import { UserService } from './user.service';
 import { Component, OnInit } from "@angular/core";
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -13,5 +14,9 @@ export class UsersComponent implements OnInit{
     }
     ngOnInit(){
       this.users = this.service.getUsers();
+    }
+    onDeleteUser(user){
+      this.service.deleteUser(user);
+      // alert(user.lastname);
     }
 }

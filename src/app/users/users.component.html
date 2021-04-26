@@ -9,11 +9,10 @@
             <th>Telefono</th>
             <th>Provincia</th>
             <th>Actions</th>
-
         </tr>
     </thead>
     <tbody>
         <!-- per dichiarare la variabile input dalla quale prendere valori usiamo user-data e gli assegniamo il valore di user -->
-        <tr app-user *ngFor="let user of users" [user-data]="user"></tr>
+        <tr app-user *ngFor="let user of users" [user-data]="user" (onDeleteUser)="onDeleteUser($event)"></tr>
     </tbody>
 </table>

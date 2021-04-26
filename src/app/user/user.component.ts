@@ -1,5 +1,6 @@
 import { UserService } from './../users/user.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,   Input, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
 
@@ -10,13 +11,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
   // decoratore Input serve per dichiarare una variabile dalla quale prendere valori
   // 'user-data' alias della variabile user
-  @Input('user-data') user
+  @Input('user-data') user;
+  @Output('onDeleteUser') userDeleted = new EventEmitter()
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
   }
   deleteUser(){
-    this.userService.deleteUser(this.user);
+    this.userDeleted.emit(this.user);
+    //this.userService.deleteUser(this.user);
   }
 
 }
