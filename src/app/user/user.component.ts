@@ -2,6 +2,7 @@ import { UserService } from '../services/user.service';
 import { Component,   Input, OnInit } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
 
+
 @Component({
 
   selector: 'tr[app-user]',
@@ -12,7 +13,10 @@ export class UserComponent implements OnInit {
   // decoratore Input serve per dichiarare una variabile dalla quale prendere valori
   // 'user-data' alias della variabile user
   @Input('user-data') user;
-  @Output('onDeleteUser') userDeleted = new EventEmitter()
+  @Output('onDeleteUser') userDeleted = new EventEmitter();
+  @Output() onSelectUser = new EventEmitter();
+
+
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
@@ -20,6 +24,9 @@ export class UserComponent implements OnInit {
   deleteUser(){
     this.userDeleted.emit(this.user);
     //this.userService.deleteUser(this.user);
+  }
+  updateUser(){
+    this.onSelectUser.emit(this.user);
   }
 
 }

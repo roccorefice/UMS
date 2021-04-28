@@ -13,6 +13,6 @@
     </thead>
     <tbody>
         <!-- per dichiarare la variabile input dalla quale prendere valori usiamo user-data e gli assegniamo il valore di user -->
-        <tr app-user *ngFor="let user of users" [user-data]="user" (onDeleteUser)="onDeleteUser($event)"></tr>
+        <tr app-user *ngFor="let user of users" [user-data]="user" (onDeleteUser)="onDeleteUser($event)" (onSelectUser)="onSelectUser($event)"></tr>
     </tbody>
 </table>

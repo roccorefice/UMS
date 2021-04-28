@@ -8,6 +8,16 @@ td {
 }
 
 button {
+    margin: 2px;
+    padding: 5px;
     border: 1px solid white;
     border-radius: 10px;
+}
+
+.delete {
+    background-color: lightcoral;
+}
+
+.update {
+    background-color: lightgreen;
 }
