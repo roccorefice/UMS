@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main {
+    width: 98%;
+    margin: auto;
+    vertical-align: top;
+}
+
+.users {
+    float: left;
+    width: 60%;
+}
+
+.userDetail {
+    float: left;
+    width: 40%;
+}
+
+.btn-save {
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    width: 80px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.form-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.form-group {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+    width: 20%;
+    text-align: center;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid lightblue;
+    width: 60%;
+    height: 20px;
+    outline: none;
+}
