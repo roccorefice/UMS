@@ -14,5 +14,8 @@ export class UserDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  saveUser(){
+    alert(this.user.id);
+  }
 
 }
