@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/user';
 
 
 
@@ -8,6 +8,7 @@ import { User } from '../interfaces/user';
 export class UserService{
   users: User[] = [
     {
+      id: 1,
       name: 'Mario',
       lastname: 'Rossi',
       fiscalcode: 'MRS999MRS',
@@ -16,6 +17,7 @@ export class UserService{
       province: 'MI'
     },
     {
+      id: 2,
       name: 'Ciccio',
       lastname: 'Pasticcio',
       fiscalcode: 'CPC88CPC',
@@ -24,6 +26,7 @@ export class UserService{
       province: 'NA'
     },
     {
+      id: 3,
       name: 'Fabio',
       lastname: 'Bianchi',
       fiscalcode: 'FBC456BNC',
@@ -32,6 +35,7 @@ export class UserService{
       province: 'TO'
     },
     {
+      id: 4,
       name: 'Claudia',
       lastname: 'Serena',
       fiscalcode: 'CLD467SRN',
@@ -40,6 +44,7 @@ export class UserService{
       province: 'BO'
     },
     {
+      id: 5,
       name: 'Rosa',
       lastname: 'Tossi',
       fiscalcode: 'RS6789TSS',
