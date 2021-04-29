@@ -1,5 +1,6 @@
 <!-- {{ user | json }} -->
 <form action="">
+    <input type="hidden" name="id" [(ngModel)]="user.id">
     <div class="form-group">
         <label for="firstname">Nome</label>
         <input [(ngModel)]="user.name" name="firstname" id="firstname">
@@ -25,7 +26,7 @@
         <input [(ngModel)]="user.province" name="province" id="province">
     </div>
     <div class="form-group form-footer">
-        <button class="btn-save">
+        <button class="btn-save" (click)="saveUser()">
         SALVA
       </button>
     </div>
