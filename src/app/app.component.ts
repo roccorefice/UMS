@@ -15,4 +15,11 @@ export class AppComponent {
     this.showForm = true;
     this.userSelected = user;
   }
+  newUser(){
+    //reinizializzo l'userSelected
+    this.userSelected = new User();
+    //mostro il form
+    this.showForm = true;
+
+  }
 }
