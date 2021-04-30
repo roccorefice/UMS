@@ -73,4 +73,10 @@ export class UserService{
         this.users[index] = user;
       }
     }
+
+    createUser(user){
+
+        this.users.splice(0, 0, user);
+
+    }
 }
